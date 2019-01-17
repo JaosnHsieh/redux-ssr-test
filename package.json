@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel lib -d dist",
     "build:client": "webpack --mode production",
-    "start": "npm run build && nodemon dist/server.js",
+    "start": "npm run build:client && npm run build && node dist/server.js",
     "serve": "npm run build && node dist/server.js",
     "test": "npm run build && mocha --require babel-register"
   },
